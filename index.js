@@ -8,8 +8,9 @@ let {noterouts}=require("./routs/note.routes")
 let {auth}=require("./middleware/authmiddleware")
 let swaggerjSdoc=require("swagger-jsdoc")
 let swaggerUi=require("swagger-ui-express")
+cors=require("cors")
 app.use(express.json())
-
+app.use(cors())
 
 app.use("/user",userrouts)
 app.use(auth)
